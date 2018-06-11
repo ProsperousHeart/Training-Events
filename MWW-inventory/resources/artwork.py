@@ -1,3 +1,5 @@
+import logging                  # https://docs.python.org/3/library/logging.html
+
 class Artwork:
     """
     This class is to create an Artwork object.

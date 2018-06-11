@@ -1,6 +1,8 @@
-from resources.wood import Wood
+# from resources.wood import Wood
+import logging                  # https://docs.python.org/3/library/logging.html
 
-class Sign(Wood):
+# class Sign(Wood):
+class Sign:
     """
     This class is to create an Sign object.
 

@@ -71,7 +71,7 @@ class CooperageItem(Wood):
 
         """
 
-        logger.debug("Getting at_cost")
+        # logger.debug("Getting at_cost")
         return self._at_cost
 
     @at_cost.setter
@@ -91,7 +91,7 @@ class CooperageItem(Wood):
 
         """
 
-        logger.debug("Getting price_sold")
+        # logger.debug("Getting price_sold")
         return self._price_sold
 
     @price_sold.setter
@@ -111,7 +111,7 @@ class CooperageItem(Wood):
 
         """
 
-        logger.debug("Getting discount")
+        # logger.debug("Getting discount")
         return self._discount
 
     @discount.setter
@@ -131,7 +131,7 @@ class CooperageItem(Wood):
 
         """
 
-        logger.debug("Getting notes")
+        # logger.debug("Getting notes")
         return self._notes
 
     @notes.setter
@@ -141,7 +141,7 @@ class CooperageItem(Wood):
 
         """
 
-        logger.debug("Setting notes")
+        # logger.debug("Setting notes")
         self._notes = notes
 
     @property
@@ -151,7 +151,7 @@ class CooperageItem(Wood):
 
         """
 
-        logger.debug("Getting custom_bool")
+        # logger.debug("Getting custom_bool")
         return self._custom_bool
 
     @custom_bool.setter
@@ -174,7 +174,7 @@ class CooperageItem(Wood):
 
         """
 
-        logger.debug("Getting completion_date")
+        # logger.debug("Getting completion_date")
         return self._completion_date
 
     @completion_date.setter
@@ -184,7 +184,7 @@ class CooperageItem(Wood):
 
         """
 
-        logger.debug("Setting completion_date")
+        # logger.debug("Setting completion_date")
         self._completion_date = completion_date
 
     @property
@@ -194,7 +194,7 @@ class CooperageItem(Wood):
 
         """
 
-        logger.debug("Getting date_added")
+        # logger.debug("Getting date_added")
         return self._date_added
 
     @property
@@ -204,7 +204,7 @@ class CooperageItem(Wood):
 
         """
 
-        logger.debug("Getting itemNum")
+        # logger.debug("Getting itemNum")
         return self._itemNum
 
     def get_dict(self):

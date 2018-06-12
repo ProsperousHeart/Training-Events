@@ -47,7 +47,7 @@ def create_piece(item_num):
 
     logger.debug('Returning new cooper_item via create_piece()')
     new_item = cooper_item.CooperageItem(sum_num=item_num)
-    logger.debug('Successfully created item ... returning ...')
+    logger.debug('Successfully created item {}!'.format(new_item.itemNum))
     # return create_item()
     return new_item
 
@@ -64,10 +64,9 @@ if __name__ == "__main__":
 
     logger.info('Creating new item...')
     item = create_piece(piece_num)
-    print('New item created:')
     logger.info('New item created!')
+    print('New item created:')
     pp.pprint(item.get_dict())
-    logger.info('The new item is shown as:\n{}'.format(pprint.pformat(item.get_dict())))
     item_list.append(item)
     piece_num += 1
 
@@ -76,8 +75,6 @@ if __name__ == "__main__":
     logger.info('Updating at_cost...')
     item.chg_atCost(4.69)
     print("Updated data after changing at_cost to $4.69:\n{}".format(pprint.pformat(item.get_dict())))
-    logger.info('The item is snow updated as:\n{}'.format(pprint.pformat(item.get_dict())))
-    logger.info('Current at_cost:  {}'.format(item.at_cost))
 
     print('===' * 5)
 
@@ -85,22 +82,18 @@ if __name__ == "__main__":
     item = create_piece(piece_num)
     print('New item created:')
     pp.pprint(item.get_dict())
-    logger.info('The new item is shown as:\n{}'.format(pprint.pformat(item.get_dict())))
     item_list.append(item)
     piece_num += 1
 
     print('===' * 5)
 
-    logger.info('Final list is:\n{}'.format(pprint.pformat([item.get_dict() for item in item_list])))
-
     print('Final list is:\n{}'.format(pprint.pformat([item.get_dict() for item in item_list])))
+    logger.info('Final list is:\n{}'.format(pprint.pformat([item.get_dict() for item in item_list])))
 
     print('===' * 5)
 
-    logger.info("Hardnesses:  {}".format([item.get_Hardness() for item in item_list]))
     print("Hardnesses:  {}".format([item.get_Hardness() for item in item_list]))
 
-    logger.info("Wood Type:  {}".format([item.get_WoodType() for item in item_list]))
     print("Wood Type:  {}".format([item.get_WoodType() for item in item_list]))
 
     logger.debug('Completing __init__ for cooper_app.py file')

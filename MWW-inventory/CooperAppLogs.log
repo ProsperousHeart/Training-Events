@@ -1,133 +1,27 @@
-06/10/2018 10:19:11 PM | DEBUG - cooper_app.py [60]:  Starting __init__ for cooper_app.py file
-06/10/2018 10:19:11 PM | INFO - cooper_app.py [65]:  Creating new item...
-06/10/2018 10:19:11 PM | DEBUG - cooper_app.py [48]:  Returning new cooper_item via create_piece()
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [43]:  Starting __init__ for CooperageItem
-06/10/2018 10:19:11 PM | DEBUG - wood.py [20]:  Creating initial wood data...
-06/10/2018 10:19:11 PM | DEBUG - wood.py [28]:  Completed setup...
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [54]:  Returning datetime
-06/10/2018 10:19:11 PM | DEBUG - cooper_app.py [50]:  Successfully created item ... returning ...
-06/10/2018 10:19:11 PM | INFO - cooper_app.py [68]:  New item created!
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [207]:  Getting itemNum
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [74]:  Getting at_cost
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [197]:  Getting date_added
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [177]:  Getting completion_date
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [154]:  Getting custom_bool
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [114]:  Getting discount
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [134]:  Getting notes
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [94]:  Getting price_sold
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [207]:  Getting itemNum
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [74]:  Getting at_cost
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [197]:  Getting date_added
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [177]:  Getting completion_date
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [154]:  Getting custom_bool
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [114]:  Getting discount
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [134]:  Getting notes
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [94]:  Getting price_sold
-06/10/2018 10:19:11 PM | INFO - cooper_app.py [70]:  The new item is shown as:
-{'at_cost': USA 0,
- 'completion_date': 'Not yet completed',
- 'custom_bool': False,
- 'date_added': '2018-6-10',
- 'discount': 0,
- 'hard_vs_soft': False,
- 'itemNum': '118',
- 'markup': USA 0,
- 'notes': '',
- 'price_sold': USA 0,
- 'vip_bool': False,
- 'wood_type': ''}
-06/10/2018 10:19:11 PM | INFO - cooper_app.py [76]:  Updating at_cost...
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [74]:  Getting at_cost
-06/10/2018 10:19:11 PM | DEBUG - wood.py [39]:  Updated at_cost from USA 0.00 to 4.69
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [84]:  Adding USA 0.00 to USA 4.69 for at_cost
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [207]:  Getting itemNum
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [74]:  Getting at_cost
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [197]:  Getting date_added
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [177]:  Getting completion_date
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [154]:  Getting custom_bool
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [114]:  Getting discount
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [134]:  Getting notes
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [94]:  Getting price_sold
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [207]:  Getting itemNum
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [74]:  Getting at_cost
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [197]:  Getting date_added
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [177]:  Getting completion_date
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [154]:  Getting custom_bool
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [114]:  Getting discount
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [134]:  Getting notes
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [94]:  Getting price_sold
-06/10/2018 10:19:11 PM | INFO - cooper_app.py [79]:  The item is snow updated as:
-{'at_cost': USA 4.69,
- 'completion_date': 'Not yet completed',
- 'custom_bool': False,
- 'date_added': '2018-6-10',
- 'discount': 0,
- 'hard_vs_soft': False,
- 'itemNum': '118',
- 'markup': USA 0,
- 'notes': '',
- 'price_sold': USA 0,
- 'vip_bool': False,
- 'wood_type': ''}
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [74]:  Getting at_cost
-06/10/2018 10:19:11 PM | INFO - cooper_app.py [80]:  Current at_cost:  USA 4.69
-06/10/2018 10:19:11 PM | INFO - cooper_app.py [84]:  Creating new item...
-06/10/2018 10:19:11 PM | DEBUG - cooper_app.py [48]:  Returning new cooper_item via create_piece()
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [43]:  Starting __init__ for CooperageItem
-06/10/2018 10:19:11 PM | DEBUG - wood.py [20]:  Creating initial wood data...
-06/10/2018 10:19:11 PM | DEBUG - wood.py [28]:  Completed setup...
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [54]:  Returning datetime
-06/10/2018 10:19:11 PM | DEBUG - cooper_app.py [50]:  Successfully created item ... returning ...
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [207]:  Getting itemNum
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [74]:  Getting at_cost
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [197]:  Getting date_added
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [177]:  Getting completion_date
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [154]:  Getting custom_bool
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [114]:  Getting discount
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [134]:  Getting notes
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [94]:  Getting price_sold
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [207]:  Getting itemNum
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [74]:  Getting at_cost
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [197]:  Getting date_added
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [177]:  Getting completion_date
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [154]:  Getting custom_bool
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [114]:  Getting discount
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [134]:  Getting notes
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [94]:  Getting price_sold
-06/10/2018 10:19:11 PM | INFO - cooper_app.py [88]:  The new item is shown as:
-{'at_cost': USA 0,
- 'completion_date': 'Not yet completed',
- 'custom_bool': False,
- 'date_added': '2018-6-10',
- 'discount': 0,
- 'hard_vs_soft': False,
- 'itemNum': '218',
- 'markup': USA 0,
- 'notes': '',
- 'price_sold': USA 0,
- 'vip_bool': False,
- 'wood_type': ''}
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [207]:  Getting itemNum
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [74]:  Getting at_cost
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [197]:  Getting date_added
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [177]:  Getting completion_date
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [154]:  Getting custom_bool
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [114]:  Getting discount
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [134]:  Getting notes
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [94]:  Getting price_sold
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [207]:  Getting itemNum
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [74]:  Getting at_cost
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [197]:  Getting date_added
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [177]:  Getting completion_date
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [154]:  Getting custom_bool
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [114]:  Getting discount
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [134]:  Getting notes
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [94]:  Getting price_sold
-06/10/2018 10:19:11 PM | INFO - cooper_app.py [94]:  Final list is:
+06/11/2018 10:51:13 PM | DEBUG - cooperage.py [60]:  Starting __init__ for cooper_app.py file
+06/11/2018 10:51:13 PM | INFO - cooperage.py [65]:  Creating new item...
+06/11/2018 10:51:13 PM | DEBUG - cooperage.py [48]:  Returning new cooper_item via create_piece()
+06/11/2018 10:51:13 PM | DEBUG - cooper_item.py [43]:  Starting __init__ for CooperageItem
+06/11/2018 10:51:13 PM | DEBUG - wood.py [20]:  Creating initial wood data...
+06/11/2018 10:51:13 PM | DEBUG - wood.py [28]:  Completed setup...
+06/11/2018 10:51:13 PM | DEBUG - cooper_item.py [54]:  Returning datetime
+06/11/2018 10:51:13 PM | DEBUG - cooperage.py [50]:  Successfully created item 118!
+06/11/2018 10:51:13 PM | INFO - cooperage.py [68]:  New item created!
+06/11/2018 10:51:13 PM | INFO - cooperage.py [75]:  Updating at_cost...
+06/11/2018 10:51:13 PM | DEBUG - wood.py [39]:  Updated at_cost from USA 0.00 to 4.69
+06/11/2018 10:51:13 PM | DEBUG - cooper_item.py [84]:  Adding USA 0.00 to USA 4.69 for at_cost
+06/11/2018 10:51:13 PM | INFO - cooperage.py [81]:  Creating new item...
+06/11/2018 10:51:13 PM | DEBUG - cooperage.py [48]:  Returning new cooper_item via create_piece()
+06/11/2018 10:51:13 PM | DEBUG - cooper_item.py [43]:  Starting __init__ for CooperageItem
+06/11/2018 10:51:13 PM | DEBUG - wood.py [20]:  Creating initial wood data...
+06/11/2018 10:51:13 PM | DEBUG - wood.py [28]:  Completed setup...
+06/11/2018 10:51:13 PM | DEBUG - cooper_item.py [54]:  Returning datetime
+06/11/2018 10:51:13 PM | DEBUG - cooperage.py [50]:  Successfully created item 218!
+06/11/2018 10:51:13 PM | INFO - cooperage.py [91]:  Final list is:
 [{'at_cost': USA 4.69,
   'completion_date': 'Not yet completed',
   'custom_bool': False,
-  'date_added': '2018-6-10',
+  'date_added': '2018-6-11',
   'discount': 0,
   'hard_vs_soft': False,
   'itemNum': '118',
@@ -139,7 +33,7 @@
  {'at_cost': USA 0,
   'completion_date': 'Not yet completed',
   'custom_bool': False,
-  'date_added': '2018-6-10',
+  'date_added': '2018-6-11',
   'discount': 0,
   'hard_vs_soft': False,
   'itemNum': '218',
@@ -148,30 +42,4 @@
   'price_sold': USA 0,
   'vip_bool': False,
   'wood_type': ''}]
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [207]:  Getting itemNum
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [74]:  Getting at_cost
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [197]:  Getting date_added
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [177]:  Getting completion_date
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [154]:  Getting custom_bool
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [114]:  Getting discount
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [134]:  Getting notes
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [94]:  Getting price_sold
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [207]:  Getting itemNum
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [74]:  Getting at_cost
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [197]:  Getting date_added
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [177]:  Getting completion_date
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [154]:  Getting custom_bool
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [114]:  Getting discount
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [134]:  Getting notes
-06/10/2018 10:19:11 PM | DEBUG - cooper_item.py [94]:  Getting price_sold
-06/10/2018 10:19:11 PM | DEBUG - wood.py [52]:  Returning if hard vs soft wood...
-06/10/2018 10:19:11 PM | DEBUG - wood.py [52]:  Returning if hard vs soft wood...
-06/10/2018 10:19:11 PM | INFO - cooper_app.py [100]:  Hardnesses:  [False, False]
-06/10/2018 10:19:11 PM | DEBUG - wood.py [52]:  Returning if hard vs soft wood...
-06/10/2018 10:19:11 PM | DEBUG - wood.py [52]:  Returning if hard vs soft wood...
-06/10/2018 10:19:11 PM | DEBUG - wood.py [66]:  Returning type of wood:  
-06/10/2018 10:19:11 PM | DEBUG - wood.py [66]:  Returning type of wood:  
-06/10/2018 10:19:11 PM | INFO - cooper_app.py [103]:  Wood Type:  ['', '']
-06/10/2018 10:19:11 PM | DEBUG - wood.py [66]:  Returning type of wood:  
-06/10/2018 10:19:11 PM | DEBUG - wood.py [66]:  Returning type of wood:  
-06/10/2018 10:19:11 PM | DEBUG - cooper_app.py [106]:  Completing __init__ for cooper_app.py file
+06/11/2018 10:51:13 PM | DEBUG - cooperage.py [99]:  Completing __init__ for cooper_app.py file

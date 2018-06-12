@@ -49,7 +49,7 @@ class Wood:
 
         """
 
-        logger.debug('Returning if hard vs soft wood...')
+        # logger.debug('Returning if hard vs soft wood...')
         return self.hard_vs_soft
         # return cls.hard_vs_soft
 
@@ -63,7 +63,7 @@ class Wood:
 
         # if self.wood_name ==
 
-        logger.debug('Returning type of wood:  {}'.format(self.wood_name))
+        # logger.debug('Returning type of wood:  {}'.format(self.wood_name))
         return self.wood_name
         # return cls.wood_name
 

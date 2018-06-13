@@ -1,30 +1,31 @@
-06/11/2018 10:51:13 PM | DEBUG - cooperage.py [60]:  Starting __init__ for cooper_app.py file
-06/11/2018 10:51:13 PM | INFO - cooperage.py [65]:  Creating new item...
-06/11/2018 10:51:13 PM | DEBUG - cooperage.py [48]:  Returning new cooper_item via create_piece()
-06/11/2018 10:51:13 PM | DEBUG - cooper_item.py [43]:  Starting __init__ for CooperageItem
-06/11/2018 10:51:13 PM | DEBUG - wood.py [20]:  Creating initial wood data...
-06/11/2018 10:51:13 PM | DEBUG - wood.py [28]:  Completed setup...
-06/11/2018 10:51:13 PM | DEBUG - cooper_item.py [54]:  Returning datetime
-06/11/2018 10:51:13 PM | DEBUG - cooperage.py [50]:  Successfully created item 118!
-06/11/2018 10:51:13 PM | INFO - cooperage.py [68]:  New item created!
-06/11/2018 10:51:13 PM | INFO - cooperage.py [75]:  Updating at_cost...
-06/11/2018 10:51:13 PM | DEBUG - wood.py [39]:  Updated at_cost from USA 0.00 to 4.69
-06/11/2018 10:51:13 PM | DEBUG - cooper_item.py [84]:  Adding USA 0.00 to USA 4.69 for at_cost
-06/11/2018 10:51:13 PM | INFO - cooperage.py [81]:  Creating new item...
-06/11/2018 10:51:13 PM | DEBUG - cooperage.py [48]:  Returning new cooper_item via create_piece()
-06/11/2018 10:51:13 PM | DEBUG - cooper_item.py [43]:  Starting __init__ for CooperageItem
-06/11/2018 10:51:13 PM | DEBUG - wood.py [20]:  Creating initial wood data...
-06/11/2018 10:51:13 PM | DEBUG - wood.py [28]:  Completed setup...
-06/11/2018 10:51:13 PM | DEBUG - cooper_item.py [54]:  Returning datetime
-06/11/2018 10:51:13 PM | DEBUG - cooperage.py [50]:  Successfully created item 218!
-06/11/2018 10:51:13 PM | INFO - cooperage.py [91]:  Final list is:
+06/12/2018 11:16:52 PM | DEBUG - cooperage.py [89]:  Starting __init__ for cooper_app.py file
+06/12/2018 11:16:52 PM | DEBUG - cooperage.py [95]:  Checking for local DB...
+06/12/2018 11:16:52 PM | INFO - cooperage.py [101]:  Creating new item...
+06/12/2018 11:16:52 PM | DEBUG - cooperage.py [49]:  Returning new cooper_item via create_piece()
+06/12/2018 11:16:52 PM | DEBUG - cooper_item.py [43]:  Starting __init__ for CooperageItem
+06/12/2018 11:16:52 PM | DEBUG - wood.py [20]:  Creating initial wood data...
+06/12/2018 11:16:52 PM | DEBUG - wood.py [28]:  Completed setup...
+06/12/2018 11:16:52 PM | DEBUG - cooper_item.py [54]:  Returning datetime
+06/12/2018 11:16:52 PM | DEBUG - cooperage.py [51]:  Successfully created item None!
+06/12/2018 11:16:52 PM | INFO - cooperage.py [103]:  New item created!
+06/12/2018 11:16:52 PM | INFO - cooperage.py [111]:  Updating at_cost...
+06/12/2018 11:16:52 PM | DEBUG - wood.py [39]:  Updated at_cost from USA 0.00 to 4.69
+06/12/2018 11:16:52 PM | DEBUG - cooper_item.py [86]:  Adding USA 0.00 to USA 4.69 for at_cost
+06/12/2018 11:16:52 PM | INFO - cooperage.py [117]:  Creating new item...
+06/12/2018 11:16:52 PM | DEBUG - cooperage.py [49]:  Returning new cooper_item via create_piece()
+06/12/2018 11:16:52 PM | DEBUG - cooper_item.py [43]:  Starting __init__ for CooperageItem
+06/12/2018 11:16:52 PM | DEBUG - wood.py [20]:  Creating initial wood data...
+06/12/2018 11:16:52 PM | DEBUG - wood.py [28]:  Completed setup...
+06/12/2018 11:16:52 PM | DEBUG - cooper_item.py [54]:  Returning datetime
+06/12/2018 11:16:52 PM | DEBUG - cooperage.py [51]:  Successfully created item None!
+06/12/2018 11:16:52 PM | INFO - cooperage.py [127]:  Final list is:
 [{'at_cost': USA 4.69,
   'completion_date': 'Not yet completed',
   'custom_bool': False,
-  'date_added': '2018-6-11',
+  'date_added': '2018-6-12',
   'discount': 0,
   'hard_vs_soft': False,
-  'itemNum': '118',
+  'itemNum': None,
   'markup': USA 0,
   'notes': '',
   'price_sold': USA 0,
@@ -33,13 +34,13 @@
  {'at_cost': USA 0,
   'completion_date': 'Not yet completed',
   'custom_bool': False,
-  'date_added': '2018-6-11',
+  'date_added': '2018-6-12',
   'discount': 0,
   'hard_vs_soft': False,
-  'itemNum': '218',
+  'itemNum': None,
   'markup': USA 0,
   'notes': '',
   'price_sold': USA 0,
   'vip_bool': False,
   'wood_type': ''}]
-06/11/2018 10:51:13 PM | DEBUG - cooperage.py [99]:  Completing __init__ for cooper_app.py file
+06/12/2018 11:16:52 PM | DEBUG - cooperage.py [135]:  Completing __init__ for cooper_app.py file

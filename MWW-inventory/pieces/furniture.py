@@ -18,6 +18,8 @@ class Furniture():
 
         """
 
+        logger.debug('Initialiazing new instance of Furniture()')
+
         self._type = type
         self._cloth = cloth
         self._folding = folding
@@ -33,13 +35,17 @@ class Furniture():
         return self._cloth
 
     @cloth.setter
-    def cloth(self, data):
+    def cloth(self, data:dict):
+        """
+        This function sets the attribute _cloth with data (dict).
+
+        Returns updated value.
+
         """
 
-
-        """
-
-        pass
+        logger.warning('Need to confirm if cloth data input is dict and proper values')
+        self._cloth = data
+        return self._cloth
 
     @property
     def folding(self):
@@ -53,11 +59,15 @@ class Furniture():
     @folding.setter
     def folding(self, folding_bool):
         """
+        This function updates the folding boolean.
 
+        Returns updated value.
 
         """
 
-        pass
+        logger.warning('Need to test if bool is a bool.')
+        self._folding = folding_bool
+        return self._folding
 
     @property
     def mww_notes(self):
@@ -75,6 +85,7 @@ class Furniture():
 
         """
 
+        logger.warning('Need to test if notes is a note - otherwise update to STR.')
         self._mww_notes = notes
         return self._mww_notes
 
@@ -94,5 +105,6 @@ class Furniture():
 
         """
 
+        logger.warning('Need to test if type_update is a STR.')
         self._type = type_update
         return self._type

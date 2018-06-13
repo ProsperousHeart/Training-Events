@@ -88,6 +88,9 @@ if __name__ == "__main__":
 
     logger.debug('Starting __init__ for cooper_app.py file')
 
+    logger.warning('Need to create a different DB log for JUST changes...')
+    logger.warning('All setter methods will eventually need to also update the DB')
+
     #   Database needs ...
     #   - DB check & create if none found
     #   - add to DB
@@ -109,7 +112,8 @@ if __name__ == "__main__":
     print('===' * 5)
 
     logger.info('Updating at_cost...')
-    item.chg_atCost(4.69)
+    # item.at_cost(4.69)
+    item.at_cost = 4.69
     print("Updated data after changing at_cost to $4.69:\n{}".format(pprint.pformat(item.get_dict())))
 
     print('===' * 5)
@@ -128,8 +132,8 @@ if __name__ == "__main__":
 
     print('===' * 5)
 
-    print("Hardnesses:  {}".format([item.get_Hardness() for item in item_list]))
+    print("Hardnesses:  {}".format([item.woodType.hard_vs_soft for item in item_list]))
 
-    print("Wood Type:  {}".format([item.get_WoodType() for item in item_list]))
+    print("Wood Type:  {}".format([item.woodType.wood_name for item in item_list]))
 
     logger.debug('Completing __init__ for cooper_app.py file')

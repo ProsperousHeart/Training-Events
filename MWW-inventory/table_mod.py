@@ -1,5 +1,7 @@
 import sqlite3
+import logging                  # https://docs.python.org/3/library/logging.html
 
+logger = logging.getLogger(__name__)
 
 def check_4_tbls(db_title):
     """
@@ -7,6 +9,8 @@ def check_4_tbls(db_title):
     will run create_tables in order to create the database.
 
     """
+
+    logger.debug('Starting check_4_tbls()...')
 
     connection = sqlite3.connect('{}.db'.format(db_title))
     cursor = connection.cursor()
@@ -24,3 +28,13 @@ def check_4_tbls(db_title):
 
     connection.commit()
     connection.close()
+    logger.debug('Completed check_4_tbls()...')
+
+
+def add_to_table(db_title:str, tbl_title:str, data_dict:dict):
+    """
+    This function adds data to a table.
+
+    """
+
+    pass

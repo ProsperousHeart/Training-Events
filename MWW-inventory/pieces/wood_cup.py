@@ -19,6 +19,8 @@ class Wood_Cup():
 
         """
 
+        logger.debug('Initialiazing new instance of Wood_Cup()')
+
         self._handle_loc = handle_loc
         # self.wood_type = wood_type_obj
         # self.art_class_obj = art_class_obj

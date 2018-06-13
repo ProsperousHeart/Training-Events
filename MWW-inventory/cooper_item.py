@@ -27,7 +27,8 @@ def entry_exit(object):
 
     return entry_exit
 
-class CooperageItem(Wood):
+# class CooperageItem(Wood):
+class CooperageItem:
     """
     This class is the item that will be used to put into the database.
 
@@ -35,7 +36,7 @@ class CooperageItem(Wood):
 
     def __init__(self, sum_num = 1, price_sold = 0.00, discount = 0,
                     notes = "",  custom_bool = False, vip_bool = False,
-                    wood_type = "", hard_vs_soft = False, at_cost = 0.00):
+                    wood_name = "", hard_vs_soft = False):
         """
         This will instantiate a CooperageItem instance.
 
@@ -54,8 +55,13 @@ class CooperageItem(Wood):
             logger.debug('Returning datetime')
             return datetime.datetime.now()
 
+        # logger.warning('Need to remove Wood as inheritance and import as class')
         # Wood.__init__(self, vip_bool = False, wood_type = "",
-        super().__init__(vip_bool, wood_type, hard_vs_soft, at_cost)
+        # super().__init__(vip_bool, wood_type, hard_vs_soft, at_cost)
+        logger.warning('Need to have Wood point to a place in the DB for autoupdating')
+        self._woodType = Wood()
+        logger.warning('Need to have Artwork point to a place in the DB for autoupdating')
+        self._artwork = Artwork()
         self._price_sold = Money(amount=price_sold, currency='USA')
         self._discount = discount
         self._notes = notes
@@ -64,7 +70,15 @@ class CooperageItem(Wood):
         self._date_added = get_today()
         # self._itemNum = str(sum_num) + str(self._date_added.year)[2:]
         self._itemNum = None
+        logger.warning('Need to create class for Owner...')
         self._owner = None
+        self._vip_bool = vip_bool
+
+        self._at_cost = self._woodType.at_cost + self._artwork.at_cost
+        logger.warning('Test if at_cost will update after base wood or art does')
+
+        self._markup = self._woodType.markup + self._artwork.markup
+        logger.warning('Test if markup will update after base wood or art does')
 
     @property
     def at_cost(self):
@@ -81,10 +95,14 @@ class CooperageItem(Wood):
         """
         This function will add value to the self.__at_cost value
 
+        Returns new _at_cost attribute value.
+
         """
 
         logger.debug("Adding {} to {} for at_cost".format(self._at_cost, value))
-        self._at_cost += value
+        self._at_cost += Money(amount=value, currency='USA')
+        logger.info('New at_cost:  {}\tRETURNING DATA NOW'.format(self._at_cost))
+        return self._at_cost
 
     @property
     def price_sold(self):
@@ -99,12 +117,15 @@ class CooperageItem(Wood):
     @price_sold.setter
     def price_sold(self, value):
         """
-        This function will add value to the self.price_sold value.
+        This function will set value as the self.price_sold value.
+
+        Returns updated attribute.
 
         """
 
         logger.debug("Setting price_sold from {} to {}".format(self._price_sold, value))
         self._price_sold = value
+        return self._price_sold
 
     @property
     def discount(self):
@@ -121,10 +142,13 @@ class CooperageItem(Wood):
         """
         This function will update the value of self.discount to value input.
 
+        Returns updated attribute.
+
         """
 
         logger.debug("Setting discount {} to {}".format(self._discount, perc_int))
         self._discount = perc_int
+        return self._discount
 
     @property
     def notes(self):
@@ -141,10 +165,13 @@ class CooperageItem(Wood):
         """
         This function will update the value of self.notes to value input.
 
+        Returns the updated attribute.
+
         """
 
         # logger.debug("Setting notes")
         self._notes = notes
+        return self._notes
 
     @property
     def custom_bool(self):
@@ -161,6 +188,8 @@ class CooperageItem(Wood):
         """
         Function will update the value of self.custom_bool to value new_bool.
 
+        Returns value in attribute
+
         """
 
         logger.debug("Setting custom_bool")
@@ -168,6 +197,8 @@ class CooperageItem(Wood):
             self._custom_bool = new_bool
         else:
             logger.error('Requested custom_bool in cooper_item to be same')
+
+        return self._custom_bool
 
     @property
     def completion_date(self):
@@ -184,10 +215,13 @@ class CooperageItem(Wood):
         """
         This function will update the value of self.notes to value input.
 
+        Returns updated attribute
+
         """
 
         # logger.debug("Setting completion_date")
         self._completion_date = completion_date
+        return self._completion_date
 
     @property
     def date_added(self):
@@ -210,7 +244,7 @@ class CooperageItem(Wood):
         return self._itemNum
 
     @itemNum.setter
-    def itemNum(self, sum_num):
+    def itemNum(self, sum_num:int):
         """
         This function takes in some number (to be provided by counting items for
         the year within a DB eventually) then adds the last 2 digits of
@@ -222,9 +256,29 @@ class CooperageItem(Wood):
 
         """
 
+        logger.warning('Need to test sum_num is number? Coming from DB though.')
         self._itemNum = str(sum_num) + str(self._date_added.year)[2:]
         return self._itemNum
 
+    @property
+    def markup(self):
+        """
+        This function returns attribute:    _markup
+
+        """
+
+        return self._markup
+
+    @markup.setter
+    def markup(self, add_markup):
+        """
+        This function adds to markup and returns updated attribute
+
+        """
+
+        logger.warning('Need to check if add_markup is INT')
+        self._markup += add_markup
+        return self._markup
 
     @property
     def owner(self):
@@ -236,13 +290,48 @@ class CooperageItem(Wood):
         return self._owner
 
     @owner.setter
-    def owner(self, owner_dict):
+    def owner(self, owner_dict:dict):
         """
-        This function updates the owner information
+        This function updates the owner information and returns attribute
 
         """
 
+        logger.warning('Need to check that input is proper dict or class item')
         self._owner = owner_dict
+        return self._owner
+
+    @property
+    def vip_bool(self):
+        """
+        This function returns current value for attribute _vip_bool
+
+        """
+
+        return self._vip_bool
+
+    @vip_bool.setter
+    def vip_bool(self, bool_update):
+        """
+        This function sets _vip_bool if different valueself.
+        Returns current value.
+
+        """
+
+        logger.warning('Need to test if bool_update is a bool')
+
+        if self._vip_bool != bool_update:
+            self._vip_bool = bool_update
+        return self._vip_bool
+
+    @property
+    def woodType(self):
+        """
+        This function returns the wood information
+
+        """
+
+        logger.warning('Needs to pull from DB')
+        return self._woodType
 
     def get_dict(self):
         # I think there is a magic method for this? If not, make one
@@ -278,10 +367,10 @@ class CooperageItem(Wood):
                 'completion_date': chk_date(self.completion_date),
                 'custom_bool': self.custom_bool,
                 'discount': self.discount,
-                'hard_vs_soft': self.hard_vs_soft,    # from Wood inheritance
+                'hard_vs_soft': self._woodType.hard_vs_soft,    # from Wood inheritance
                 'markup': self.markup,                # from Wood inheritance
                 'notes': self.notes,
                 'price_sold': self.price_sold,
                 'vip_bool': self.vip_bool,            # from Wood inheritance
-                'wood_type': self.wood_name           # from Wood inheritance
+                'wood_type': self._woodType.wood_name           # from Wood inheritance
                 }

@@ -16,6 +16,7 @@ class Sign:
 
         """
 
+        logger.debug('Initialiazing new instance of Sign()')
         self._size_l = size_l
         self._size_w = size_w
         self._mww_notes = mww_notes

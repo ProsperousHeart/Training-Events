@@ -62,7 +62,9 @@ class CooperageItem(Wood):
         self._custom_bool = custom_bool
         self._completion_date = None
         self._date_added = get_today()
-        self._itemNum = str(sum_num) + str(self._date_added.year)[2:]
+        # self._itemNum = str(sum_num) + str(self._date_added.year)[2:]
+        self._itemNum = None
+        self._owner = None
 
     @property
     def at_cost(self):
@@ -206,6 +208,41 @@ class CooperageItem(Wood):
 
         # logger.debug("Getting itemNum")
         return self._itemNum
+
+    @itemNum.setter
+    def itemNum(self, sum_num):
+        """
+        This function takes in some number (to be provided by counting items for
+        the year within a DB eventually) then adds the last 2 digits of
+        current year to it. This is to be used as the completed piece number
+        field. NOT to be used as main key within a SQL DB, as it only is
+        created when piece is completed.
+
+        Returns the new completed item number.
+
+        """
+
+        self._itemNum = str(sum_num) + str(self._date_added.year)[2:]
+        return self._itemNum
+
+
+    @property
+    def owner(self):
+        """
+        This function returns the information of the owner of the item.
+
+        """
+
+        return self._owner
+
+    @owner.setter
+    def owner(self, owner_dict):
+        """
+        This function updates the owner information
+
+        """
+
+        self._owner = owner_dict
 
     def get_dict(self):
         # I think there is a magic method for this? If not, make one

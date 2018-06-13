@@ -69,7 +69,7 @@ class Furniture():
         return self._mww_notes
 
     @mww_notes.setter
-    def mww_notes(self, notes:string):
+    def mww_notes(self, notes:str):
         """
         This function updates notes about the furniture and then returns the data.
 
@@ -88,7 +88,7 @@ class Furniture():
         return self._type
 
     @type.setter
-    def type(self, type_update:string):
+    def type(self, type_update:str):
         """
         This function sets the attribute _type then returns new value.
 

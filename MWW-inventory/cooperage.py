@@ -1,6 +1,7 @@
 import cooper_item
 import logging                  # https://docs.python.org/3/library/logging.html
 import pprint
+import table_mod as tables
 
 # create_item = cooperidge_item.CooperageItem
 
@@ -51,11 +52,6 @@ def create_piece(item_num):
     # return create_item()
     return new_item
 
-#   Database needs ...
-#   - DB check & create if none found
-#   - add to DB
-#   - update in DB (per piece, as well as wood resources)
-
 #   Create options
 #   - create new cooper_item (cup, sign, furniture, etc)
 #   - create new location (where they take the cups to)
@@ -91,6 +87,13 @@ if __name__ == "__main__":
     """
 
     logger.debug('Starting __init__ for cooper_app.py file')
+
+    #   Database needs ...
+    #   - DB check & create if none found
+    #   - add to DB
+    #   - update in DB (per piece, as well as wood resources)
+    logger.debug('Checking for local DB...')
+    tbl_cursor = tables.check_4_tbls('cooperage')
 
     item_list = []
     piece_num = 1

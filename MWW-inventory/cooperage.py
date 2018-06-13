@@ -51,6 +51,39 @@ def create_piece(item_num):
     # return create_item()
     return new_item
 
+#   Database needs ...
+#   - DB check & create if none found
+#   - add to DB
+#   - update in DB (per piece, as well as wood resources)
+
+#   Create options
+#   - create new cooper_item (cup, sign, furniture, etc)
+#   - create new location (where they take the cups to)
+
+#   viewing options
+#   - all items
+#   - just cups
+#   - just Furniture
+#   - just signs
+#   - wood inventory
+#   - sold
+#   - to sell
+#   - what items are in what location
+
+#   update cooperage cooperidge_item:
+#   - add final piece number
+#   - update artwork
+#   - update price sold
+#   - update notes
+#   - update _completion_date
+#   - update handle side, staves #, size if Wood_Cup
+
+#   exportation ability
+#   - export to Excel locally
+#   - export to Google excel
+
+#   also looking for ability to backup DB locally???
+
 if __name__ == "__main__":
     """
     This function ensures that if this file is run, it is read as a source file.

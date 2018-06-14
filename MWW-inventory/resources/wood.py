@@ -116,26 +116,26 @@ class Wood:
         # return {'hardness': self.hard_vs_soft, 'type': self.wood_name}
         return {'hardness': cls.hard_vs_soft, 'name': cls.wood_name}
 
-    # def get_dict(self):
-    @classmethod
-    def get_WoodInfo(cls):
+    def get_dict(self):
+    # @classmethod
+    # def get_WoodInfo(cls):
         """
         This function returns the dict view of the item instance.
 
         """
 
         logger.debug('Returning dictionary of attributes for Wood...')
-        # return {
-        #     'at_cost': self.at_cost,
-        #     'hard_vs_soft': self.hard_vs_soft,
-        #     'markup': self.markup,
-        #     'wood_name': self.wood_name,
-        #     'vip_bool': self.vip_bool
-        # }
         return {
-            'at_cost': cls.at_cost,
-            'hard_vs_soft': cls.hard_vs_soft,
-            'markup': cls.markup,
-            'wood_name': cls.wood_name,
-            'vip_bool': cls.vip_bool
+            'at_cost': self.at_cost,
+            'hard_vs_soft': self.hard_vs_soft,
+            'markup': self.markup,
+            'wood_name': self.wood_name,
+            'vip_bool': self.vip_bool
         }
+        # return {
+        #     'at_cost': cls.at_cost,
+        #     'hard_vs_soft': cls.hard_vs_soft,
+        #     'markup': cls.markup,
+        #     'wood_name': cls.wood_name,
+        #     'vip_bool': cls.vip_bool
+        # }

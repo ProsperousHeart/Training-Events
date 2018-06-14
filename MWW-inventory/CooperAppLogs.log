@@ -1,64 +1,56 @@
-06/13/2018 09:36:44 AM | DEBUG - cooperage.py [89]:  Starting __init__ for cooper_app.py file
-06/13/2018 09:36:44 AM | WARNING - cooperage.py [91]:  Need to create a different DB log for JUST changes...
-06/13/2018 09:36:44 AM | WARNING - cooperage.py [92]:  All setter methods will eventually need to also update the DB
-06/13/2018 09:36:44 AM | DEBUG - cooperage.py [98]:  Checking for local DB...
-06/13/2018 09:36:44 AM | DEBUG - table_mod.py [13]:  Starting check_4_tbls()...
-06/13/2018 09:36:44 AM | DEBUG - table_mod.py [31]:  Completed check_4_tbls()...
-06/13/2018 09:36:44 AM | INFO - cooperage.py [104]:  Creating new item...
-06/13/2018 09:36:44 AM | DEBUG - cooperage.py [49]:  Returning new cooper_item via create_piece()
-06/13/2018 09:36:44 AM | DEBUG - cooper_item.py [44]:  Starting __init__ for CooperageItem
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [61]:  Need to have Wood point to a place in the DB for autoupdating
-06/13/2018 09:36:44 AM | DEBUG - wood.py [20]:  Creating initial wood data...
-06/13/2018 09:36:44 AM | DEBUG - wood.py [28]:  Completed setup...
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [63]:  Need to have Artwork point to a place in the DB for autoupdating
-06/13/2018 09:36:44 AM | DEBUG - cooper_item.py [55]:  Returning datetime
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [73]:  Need to create class for Owner...
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [78]:  Test if at_cost will update after base wood or art does
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [81]:  Test if markup will update after base wood or art does
-06/13/2018 09:36:44 AM | DEBUG - cooperage.py [51]:  Successfully created item None!
-06/13/2018 09:36:44 AM | INFO - cooperage.py [106]:  New item created!
-06/13/2018 09:36:44 AM | INFO - cooperage.py [114]:  Updating at_cost...
-06/13/2018 09:36:44 AM | DEBUG - cooper_item.py [102]:  Adding USA 0.00 to 4.69 for at_cost
-06/13/2018 09:36:44 AM | INFO - cooper_item.py [104]:  New at_cost:  USA 4.69	RETURNING DATA NOW
-06/13/2018 09:36:44 AM | INFO - cooperage.py [121]:  Creating new item...
-06/13/2018 09:36:44 AM | DEBUG - cooperage.py [49]:  Returning new cooper_item via create_piece()
-06/13/2018 09:36:44 AM | DEBUG - cooper_item.py [44]:  Starting __init__ for CooperageItem
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [61]:  Need to have Wood point to a place in the DB for autoupdating
-06/13/2018 09:36:44 AM | DEBUG - wood.py [20]:  Creating initial wood data...
-06/13/2018 09:36:44 AM | DEBUG - wood.py [28]:  Completed setup...
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [63]:  Need to have Artwork point to a place in the DB for autoupdating
-06/13/2018 09:36:44 AM | DEBUG - cooper_item.py [55]:  Returning datetime
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [73]:  Need to create class for Owner...
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [78]:  Test if at_cost will update after base wood or art does
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [81]:  Test if markup will update after base wood or art does
-06/13/2018 09:36:44 AM | DEBUG - cooperage.py [51]:  Successfully created item None!
-06/13/2018 09:36:44 AM | INFO - cooperage.py [131]:  Final list is:
-[{'at_cost': USA 4.690000000000000390798504668,
-  'completion_date': 'Not yet completed',
-  'custom_bool': False,
-  'date_added': '2018-6-13',
-  'discount': 0,
-  'hard_vs_soft': False,
-  'itemNum': None,
-  'markup': USA 0,
-  'notes': '',
-  'price_sold': USA 0,
-  'vip_bool': False,
-  'wood_type': ''},
- {'at_cost': USA 0,
-  'completion_date': 'Not yet completed',
-  'custom_bool': False,
-  'date_added': '2018-6-13',
-  'discount': 0,
-  'hard_vs_soft': False,
-  'itemNum': None,
-  'markup': USA 0,
-  'notes': '',
-  'price_sold': USA 0,
-  'vip_bool': False,
-  'wood_type': ''}]
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [333]:  Needs to pull from DB
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [333]:  Needs to pull from DB
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [333]:  Needs to pull from DB
-06/13/2018 09:36:44 AM | WARNING - cooper_item.py [333]:  Needs to pull from DB
-06/13/2018 09:36:44 AM | DEBUG - cooperage.py [139]:  Completing __init__ for cooper_app.py file
+06/14/2018 12:52:26 AM | DEBUG - cooperage.py [130]:  Starting __init__ for cooper_app.py file
+06/14/2018 12:52:26 AM | WARNING - cooperage.py [132]:  Need to create a different DB log for JUST changes...
+06/14/2018 12:52:26 AM | WARNING - cooperage.py [133]:  All setter methods will eventually need to also update the DB
+06/14/2018 12:52:26 AM | DEBUG - cooperage.py [139]:  Checking for local DB...
+06/14/2018 12:52:26 AM | DEBUG - cooper_item.py [44]:  Starting __init__ for CooperageItem
+06/14/2018 12:52:26 AM | WARNING - cooper_item.py [61]:  Need to have Wood point to a place in the DB for autoupdating
+06/14/2018 12:52:26 AM | DEBUG - wood.py [20]:  Creating initial wood data...
+06/14/2018 12:52:26 AM | DEBUG - wood.py [28]:  Completed setup...
+06/14/2018 12:52:26 AM | WARNING - cooper_item.py [63]:  Need to have Artwork point to a place in the DB for autoupdating
+06/14/2018 12:52:26 AM | DEBUG - cooper_item.py [55]:  Returning datetime
+06/14/2018 12:52:26 AM | WARNING - cooper_item.py [73]:  Need to create class for Owner...
+06/14/2018 12:52:26 AM | WARNING - cooper_item.py [78]:  Test if at_cost will update after base wood or art does
+06/14/2018 12:52:26 AM | WARNING - cooper_item.py [81]:  Test if markup will update after base wood or art does
+06/14/2018 12:52:26 AM | DEBUG - table_mod.py [29]:  Starting check_4_tbls()...
+06/14/2018 12:52:27 AM | DEBUG - table_mod.py [58]:  Completed check_4_tbls()...
+06/14/2018 12:52:27 AM | INFO - cooperage.py [146]:  Creating new item...
+06/14/2018 12:52:27 AM | DEBUG - cooper_item.py [44]:  Starting __init__ for CooperageItem
+06/14/2018 12:52:27 AM | WARNING - cooper_item.py [61]:  Need to have Wood point to a place in the DB for autoupdating
+06/14/2018 12:52:27 AM | DEBUG - wood.py [20]:  Creating initial wood data...
+06/14/2018 12:52:27 AM | DEBUG - wood.py [28]:  Completed setup...
+06/14/2018 12:52:27 AM | WARNING - cooper_item.py [63]:  Need to have Artwork point to a place in the DB for autoupdating
+06/14/2018 12:52:27 AM | DEBUG - cooper_item.py [55]:  Returning datetime
+06/14/2018 12:52:27 AM | WARNING - cooper_item.py [73]:  Need to create class for Owner...
+06/14/2018 12:52:27 AM | WARNING - cooper_item.py [78]:  Test if at_cost will update after base wood or art does
+06/14/2018 12:52:27 AM | WARNING - cooper_item.py [81]:  Test if markup will update after base wood or art does
+06/14/2018 12:52:27 AM | DEBUG - cooperage.py [74]:  Returning new cooper_item via create_piece()
+06/14/2018 12:52:27 AM | INFO - cooperage.py [148]:  New item created!
+06/14/2018 12:52:27 AM | DEBUG - cooperage.py [154]:  Calling sql_cnxn() for ADD...
+06/14/2018 12:52:27 AM | DEBUG - table_mod.py [110]:  Starting add_to_table()...
+06/14/2018 12:52:27 AM | INFO - table_mod.py [120]:  Committed add to items DB
+06/14/2018 12:52:27 AM | INFO - cooperage.py [163]:  Updating at_cost...
+06/14/2018 12:52:27 AM | WARNING - cooperage.py [164]:  Need to update DB not just local variable.
+06/14/2018 12:52:27 AM | DEBUG - cooper_item.py [102]:  Adding USA 0.00 to 4.69 for at_cost
+06/14/2018 12:52:27 AM | INFO - cooper_item.py [104]:  New at_cost:  USA 4.69	RETURNING DATA NOW
+06/14/2018 12:52:27 AM | INFO - cooperage.py [171]:  Creating new item...
+06/14/2018 12:52:27 AM | DEBUG - cooper_item.py [44]:  Starting __init__ for CooperageItem
+06/14/2018 12:52:27 AM | WARNING - cooper_item.py [61]:  Need to have Wood point to a place in the DB for autoupdating
+06/14/2018 12:52:27 AM | DEBUG - wood.py [20]:  Creating initial wood data...
+06/14/2018 12:52:27 AM | DEBUG - wood.py [28]:  Completed setup...
+06/14/2018 12:52:27 AM | WARNING - cooper_item.py [63]:  Need to have Artwork point to a place in the DB for autoupdating
+06/14/2018 12:52:27 AM | DEBUG - cooper_item.py [55]:  Returning datetime
+06/14/2018 12:52:27 AM | WARNING - cooper_item.py [73]:  Need to create class for Owner...
+06/14/2018 12:52:27 AM | WARNING - cooper_item.py [78]:  Test if at_cost will update after base wood or art does
+06/14/2018 12:52:27 AM | WARNING - cooper_item.py [81]:  Test if markup will update after base wood or art does
+06/14/2018 12:52:27 AM | DEBUG - cooperage.py [74]:  Returning new cooper_item via create_piece()
+06/14/2018 12:52:27 AM | DEBUG - cooperage.py [178]:  Calling sql_cnxn() for ADD...
+06/14/2018 12:52:27 AM | DEBUG - table_mod.py [110]:  Starting add_to_table()...
+06/14/2018 12:52:27 AM | INFO - table_mod.py [120]:  Committed add to items DB
+06/14/2018 12:52:27 AM | WARNING - cooperage.py [189]:  Need to get Hardnesses of all wood of items in DB
+06/14/2018 12:52:27 AM | WARNING - cooperage.py [193]:  Need to get names of all wood type of items in DB
+06/14/2018 12:52:27 AM | DEBUG - cooperage.py [195]:  Starting tests for SQL DB calls...
+06/14/2018 12:52:27 AM | DEBUG - table_mod.py [67]:  Starting print_tables()...
+06/14/2018 12:52:27 AM | INFO - table_mod.py [72]:  No table name provided - getting all...
+06/14/2018 12:52:27 AM | INFO - table_mod.py [97]:  ROW:  (1, None, 'USA 0.00', '<resources.artwork.Artwork object at 0x000001F7A6095B70>', '2018-6-14', 'Not yet completed', 0, 0, 0, 'USA 0.00', '', 'USA 0.00', 0, '')
+06/14/2018 12:52:27 AM | INFO - table_mod.py [97]:  ROW:  (2, None, 'USA 0.00', '<resources.artwork.Artwork object at 0x000001F7A609E898>', '2018-6-14', 'Not yet completed', 0, 0, 0, 'USA 0.00', '', 'USA 0.00', 0, '')
+06/14/2018 12:52:27 AM | DEBUG - cooperage.py [201]:  Completing __init__ for cooper_app.py file

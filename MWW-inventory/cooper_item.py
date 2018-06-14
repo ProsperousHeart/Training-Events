@@ -105,6 +105,25 @@ class CooperageItem:
         return self._at_cost
 
     @property
+    def artwork(self):
+        """
+        This function returns the class Artwork from attribute _artwork
+
+        """
+
+        return self._artwork
+
+    @artwork.setter
+    def artwork(self, data):
+        """
+
+
+        """
+
+        logger.error('Not yet built ... needs to be something to do with class')
+        return (True, 'Not yet built ... needs to be something to do with class')
+
+    @property
     def price_sold(self):
         """
         This function returns the attribute info of price_sold.
@@ -331,7 +350,7 @@ class CooperageItem:
         """
 
         logger.warning('Needs to pull from DB')
-        return self._woodType
+        return self._woodType.get_dict()
 
     def get_dict(self):
         # I think there is a magic method for this? If not, make one
@@ -363,6 +382,7 @@ class CooperageItem:
 
         return {'itemNum': self.itemNum,
                 'at_cost': self.at_cost,              # from Wood inheritance
+                'artwork': self.artwork,
                 'date_added': chk_date(self.date_added),
                 'completion_date': chk_date(self.completion_date),
                 'custom_bool': self.custom_bool,
@@ -374,3 +394,62 @@ class CooperageItem:
                 'vip_bool': self.vip_bool,            # from Wood inheritance
                 'wood_type': self._woodType.wood_name           # from Wood inheritance
                 }
+
+    def get_txtDict(self):
+        # I think there is a magic method for this? If not, make one
+        """
+        This function returns the dict view of the item instance - string items.
+
+        """
+
+        def chk_date(completion_date):
+            """
+            This function checks if None, returns "Not yet completed"
+            Otherwise returns datetime object.
+
+            """
+
+            def create_DateStr(dt_obj):
+                """
+                This function takes in a DateTime object and returns the date
+                in a string format.
+
+                """
+
+                return "{}-{}-{}".format(dt_obj.year, dt_obj.month, dt_obj.day)
+
+            if completion_date is None:
+                return "Not yet completed"
+
+            return create_DateStr(completion_date)
+
+        return {'itemNum': self.itemNum,
+                'at_cost': str(self.at_cost),              # from Wood inheritance
+                'artwork': str(self.artwork),
+                'date_added': chk_date(self.date_added),
+                'completion_date': chk_date(self.completion_date),
+                'custom_bool': self.custom_bool,
+                'discount': self.discount,
+                'hard_vs_soft': self._woodType.hard_vs_soft,    # from Wood inheritance
+                'markup': str(self.markup),                # from Wood inheritance
+                'notes': self.notes,
+                'price_sold': str(self.price_sold),
+                'vip_bool': self.vip_bool,            # from Wood inheritance
+                'wood_type': self._woodType.wood_name           # from Wood inheritance
+                }
+
+#    @classmethod
+#    def get_columns(cls):
+#        """
+#        This function provides the names of the attributes to be used as columns
+#
+#        """
+#
+#        return ['itemNum', 'at_cost', 'date_added', 'completion_date',
+#                'custom_bool', 'discount', 'hard_vs_soft': self._woodType.hard_vs_soft,    # from Wood inheritance
+#                'markup': self.markup,                # from Wood inheritance
+#                'notes': self.notes,
+#                'price_sold': self.price_sold,
+#                'vip_bool': self.vip_bool,            # from Wood inheritance
+#                'wood_type': self._woodType.wood_name           # from Wood inheritance
+#                }

@@ -38,6 +38,20 @@ to create an Excel file, or sqlite3 / mongoDB to create a database?
 Gather these requirements beforehand, including any documentation
 you feel you may need when you're ready to work on those pieces.
 
+## Logic
+
+You will also need to do a logical mapping of winning combinations:
+
+         | ROCK  |   PAPER  | SCISSORS
+ROCK     |  tie  |   paper  | rock
+PAPER    | paper |    tie   | scissors
+SCISSORS |  rock | scissors | tie
+
+If you decide to expand on your options, be sure to redo your logic.
+
+Or leverage your time by using someone else's work:
+https://www.liquidfractal.org/gallery/image/196-rock-paper-scissors-lizard-spock-spider-man-batman-wizard-glock
+
 # Timelines
 
 This is really based on how often the BU wants an update (it is suggested

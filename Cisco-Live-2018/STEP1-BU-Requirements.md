@@ -19,7 +19,7 @@ rock, paper, scissors game?
 3 - there are at minimum 3 options
 4 - need some way to view the winner
 
-## Nice To Have
+## Nice To Have (More Complexity)
 
 What are some things that would make this a better user experience?
 - more options (Lizard or Spock, anyone?)

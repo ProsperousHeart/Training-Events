@@ -14,9 +14,9 @@ Well ... great. So let's talk about what's possible.
 Start from ground floor. What are the base requirements of a simple
 rock, paper, scissors game?
 
-1 - there are 2 players
-2 - there are some number of combinations to create a tie / winner
-3 - there are at minimum 3 options
+1 - there are 2 players<br>
+2 - there are some number of combinations to create a tie / winner<br>
+3 - there are at minimum 3 options<br>
 4 - need some way to view the winner
 
 ## Nice To Have (More Complexity)
@@ -44,15 +44,14 @@ you feel you may need when you're ready to work on those pieces.
 
 You will also need to do a logical mapping of winning combinations:
 
-         | ROCK  |   PAPER  | SCISSORS
-ROCK     |  tie  |   paper  | rock
-PAPER    | paper |    tie   | scissors
-SCISSORS |  rock | scissors | tie
+|         | ROCK  |   PAPER  | SCISSORS
+|ROCK     |  tie  |   paper  | rock
+|PAPER    | paper |    tie   | scissors
+|SCISSORS |  rock | scissors | tie
 
 If you decide to expand on your options, be sure to redo your logic.
 
-Or leverage your time by using someone else's work:
-https://www.liquidfractal.org/gallery/image/196-rock-paper-scissors-lizard-spock-spider-man-batman-wizard-glock
+Or leverage your time by using someone else's work like [this fine specimen](https://www.liquidfractal.org/gallery/image/196-rock-paper-scissors-lizard-spock-spider-man-batman-wizard-glock)!
 
 # Timelines
 

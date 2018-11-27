@@ -16,7 +16,7 @@
 # =============================================================================
 import logging
 logging.basicConfig(
-    filename='CiscoLive2018-Step3.log',       # consider using formatting instead
+    filename='CiscoLive2018-Step4.log',       # consider using formatting instead
     filemode='w',                       # overwrites the file every time
     level=logging.DEBUG,                # lowest logging level
     format="%(asctime)s|%(levelname)s: %(name)s @ %(lineno)d|%(message)s"
@@ -42,39 +42,6 @@ choices = {
     3:  'scissors'
 }
 
-
-if __name__ == "__main__":
-    """
-    This function is only executed if run as a script.
-    This particular bare bones STEP3 will only utilize base requirements.
-    """
-
-    logger.debug('Starting {}()...'.format(__name__))
-
-    # ================================================
-    # The functions needed are as follows:
-    #   - get user input
-    #   - generate choice for computer
-    #   - calculate winner
-    #   - print winner
-    #
-    #   NOTE:  Be sure that you ALWAYS check the data returned
-    #          This ensures you are getting the excct type of
-    #          data expected as well as avoid future bugs.
-    #          See "complete.py" for everything.
-    # ================================================
-
-    # ================================================
-    # Nice to have needs:
-    #   - way to store info (database)
-    #   - way to retrieve info (to show scoreboard)
-    #   - way to email
-    #   - expanded logic for additional options
-    #   - possibly Jinja2 for a nice HTML look
-    # ================================================
-
-    # pass
-    logger.debug('Ending {}()...'.format(__name__))
 
 def get_user_input():
     """
@@ -165,3 +132,40 @@ def print_winner(data_dict:dict):
     logger.debug('Starting print_winner()...')
     logger.debug('Ending print_winner()...')
     # pass
+
+
+if __name__ == "__main__":
+    """
+    This function is only executed if run as a script.
+    This particular bare bones STEP3 will only utilize base requirements.
+    """
+
+    logger.debug('Starting {}()...'.format(__name__))
+
+    # ==========================================================
+    # The functions needed are as follows:
+    #   - get user input
+    #   - generate choice for computer
+    #   - calculate winner
+    #   - print winner
+    #
+    #   NOTE:  Be sure that you ALWAYS check the data returned
+    #          This ensures you are getting the excct type of
+    #          data expected as well as avoid future bugs.
+    #          See "complete.py" for everything.
+    # ==========================================================
+    user = get_user_input()
+    comp = get_comp_choice()
+    data_dict = calc_winner(user, comp)
+    print_winner(data_dict)
+
+    # ================================================
+    # Nice to have needs:
+    #   - way to store info (database)
+    #   - way to retrieve info (to show scoreboard)
+    #   - way to email
+    #   - expanded logic for additional options
+    #   - possibly Jinja2 for a nice HTML look
+    # ================================================
+
+    logger.debug('Ending {}()...'.format(__name__))

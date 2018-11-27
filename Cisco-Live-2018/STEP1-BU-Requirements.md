@@ -27,6 +27,8 @@ What are some things that would make this a better user experience?
 - scoreboard
 - ability to email or print result
 - visualize the number of games and compare results and losses
+- allow user to play multiple times without having to run script each time
+    (no database required for this one since you're not storing anything)
 
 # Resources Needed
 

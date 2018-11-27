@@ -71,6 +71,7 @@ if __name__ == "__main__":
     #   - way to email
     #   - expanded logic for additional options
     #   - possibly Jinja2 for a nice HTML look
+    #   - ability to play more than once (even if not storing data)
     # ================================================
 
     # pass

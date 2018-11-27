@@ -42,61 +42,6 @@ choices = {
     3:  'scissors'
 }
 
-# ======================================================================
-# create a class to be used for a user (or computer) making a "choice"
-# Inspired by:  https://stackoverflow.com/a/3694822
-#
-# This also allows you to grow your options, such as providing a username!
-# How would you integrate allowing them to provide their name?
-# ======================================================================
-class Choice(object):
-    """
-    This class uses object orientation to wrap "data" in a proper class/obj.
-
-    """
-
-    def __init__(self):
-        """
-        This is the constructor function - also known
-        as what happens when this class is created.
-
-        """
-
-        logger.debug('Creating new Choice class object...')
-        logger.debug('Completed creation of new Choice class object...')
-
-        @property
-        def choice(self):
-            """
-            This function returns the attribute:    choice
-
-            """
-
-            logger.debug('Returning choice attribute data...')
-            return self.__choice
-
-        @choice.setter
-        def choice(self, data):
-            """
-            This function sets the attribute:   choice
-
-            """
-
-            logger.debug('Setting Choice class attribute for choice...')
-            logger.debug('Completed setting Choice class attribute for choice')
-
-    def input(self):
-        """
-        This function allows user to provide input.
-        Assigns response to the choice attribute.
-
-        """
-
-        logger.debug('Requesting input...')
-        logger.debug('Returning response...')
-
-
-
 
 def get_user_input():
     """

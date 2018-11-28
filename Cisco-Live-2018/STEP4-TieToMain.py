@@ -1,4 +1,9 @@
-# This is step 3 of the "Bare Bones" Process - Creating The Empty Functions
+# =============================================================================
+# This is step 4 of the "Bare Bones" Process - Tying It All Together!
+# Please see the subsequent lines following:
+#   if __name__ == "__main__":
+# =============================================================================
+# This was for step 3 of the "Bare Bones" Process - Creating The Empty Functions
 # Here is the process I follow for this phase ...
 #
 #   1 - write out the comments of expected functions
@@ -137,7 +142,7 @@ def print_winner(data_dict:dict):
 if __name__ == "__main__":
     """
     This function is only executed if run as a script.
-    This particular bare bones STEP3 will only utilize base requirements.
+    This particular bare bones STEP4 integrates the outside functions.
     """
 
     logger.debug('Starting {}()...'.format(__name__))

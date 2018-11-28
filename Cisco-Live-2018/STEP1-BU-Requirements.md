@@ -1,7 +1,7 @@
 # Main Requirements
 
-Your business unit has requested that you make a rock, paper, scissors game
-that employees' kids can play when they visit their parents.
+Your business unit has requested that you make a rock, paper, scissors
+game that employees' kids can play when they visit their parents.
 
 And they want it done in a month.
 
@@ -44,10 +44,10 @@ you feel you may need when you're ready to work on those pieces.
 
 You will also need to do a logical mapping of winning combinations:
 
-|         | ROCK  |   PAPER  | SCISSORS
-|ROCK     |  tie  |   paper  | rock
-|PAPER    | paper |    tie   | scissors
-|SCISSORS |  rock | scissors | tie
+         | ROCK  |   PAPER  | SCISSORS
+ROCK     |  tie  |   paper  | rock
+PAPER    | paper |    tie   | scissors
+SCISSORS |  rock | scissors | tie
 
 If you decide to expand on your options, be sure to redo your logic.
 

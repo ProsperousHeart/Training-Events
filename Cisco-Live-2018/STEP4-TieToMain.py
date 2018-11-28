@@ -21,9 +21,9 @@
 # =============================================================================
 import logging
 logging.basicConfig(
-    filename='CiscoLive2018-Step4.log',       # consider using formatting instead
-    filemode='w',                       # overwrites the file every time
-    level=logging.DEBUG,                # lowest logging level
+    filename='CiscoLive2018-Step4.log',     # consider using formatting instead
+    filemode='w',                           # overwrites the file every time
+    level=logging.DEBUG,                    # lowest logging level
     format="%(asctime)s|%(levelname)s: %(name)s @ %(lineno)d|%(message)s"
     )
 # setup logging buffer for console

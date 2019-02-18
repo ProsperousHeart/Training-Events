@@ -1,9 +1,4 @@
-# =============================================================================
-# This is step 4 of the "Bare Bones" Process - Tying It All Together!
-# Please see the subsequent lines following:
-#   if __name__ == "__main__":
-# =============================================================================
-# This was for step 3 of the "Bare Bones" Process - Creating The Empty Functions
+# This is step 3 of the "Bare Bones" Process - Creating The Empty Functions
 # Here is the process I follow for this phase ...
 #
 #   1 - write out the comments of expected functions
@@ -19,22 +14,34 @@
 #   www.digitalocean.com/community/tutorials/how-to-use-logging-in-python3
 #   www.loggly.com/ultimate-guide/python-logging-basics
 # =============================================================================
+#   NOTES:
+#       - some of the logging is not consistent throughout ... this is
+#           intentional so you can see other ways of leaving breadcrumbs
+#           for your future self
+#       - as mentioned before, there is no one right way to code, so several
+#           different styles have been shared here
+# =============================================================================
 import logging
 logging.basicConfig(
-    filename='CiscoLive2018-Step4.log',     # consider using formatting instead
-    filemode='w',                           # overwrites the file every time
-    level=logging.DEBUG,                    # lowest logging level
+    filename='CiscoLive2018-FINAL.log',       # consider using formatting instead
+    filemode='w',                       # overwrites the file every time
+    level=logging.DEBUG,                # lowest logging level
     format="%(asctime)s|%(levelname)s: %(name)s @ %(lineno)d|%(message)s"
     )
 # setup logging buffer for console
 console = logging.StreamHandler()
-console.setLevel(logging.DEBUG) # all DEBUG or higher will show on console
+console.setLevel(logging.DEBUG) # all WARNING or higher will show on console
 
 # set format easy for console to use
 formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
 console.setFormatter(formatter)
 logging.getLogger(__name__).addHandler(console)
 logger = logging.getLogger(__name__)
+
+# ===========================================================
+# random is a module we will use to generate a random number
+# ===========================================================
+import random
 
 # ======================================================================
 # create global for choice options ... bad practice, so would be better
@@ -46,6 +53,87 @@ choices = {
     2:  'paper',
     3:  'scissors'
 }
+
+# ======================================================================
+# create a class to be used for a user (or computer) making a "choice"
+# Inspired by:  https://stackoverflow.com/a/3694822
+#
+# This also allows you to grow your options, such as providing a username!
+# How would you integrate allowing them to provide their name?
+# ======================================================================
+class Choice(object):
+    """
+    This class uses object orientation to wrap "data" in a proper class/obj.
+
+    """
+
+    def __init__(self):
+        """
+        This is the constructor function - also known
+        as what happens when this class is created.
+
+        """
+
+        logger.debug('Creating new Choice class object...')
+        self.choice = 0     # could set to None, but we expect this to be INT
+        logger.debug('Completed creation of new Choice class object...')
+
+        @property
+        def choice(self):
+            """
+            This function returns the attribute:    choice
+
+            """
+
+            logger.debug('Returning choice attribute data...')
+            return self.__choice
+
+        @choice.setter
+        def choice(self, data):
+            """
+            This function sets the attribute:   choice
+
+            """
+
+            logger.debug('Setting Choice class attribute for choice...')
+            self.__choice = data
+            logger.debug('Completed setting Choice class attribute for choice')
+
+    def input(self):
+        """
+        This function allows user to provide input.
+        Assigns response to the choice attribute.
+
+        """
+
+        def check_input(input_str:str):
+            """
+            This function checks if the input was one of the possible numbers.
+
+            """
+            if input_str is None:
+                logger.warning('This should never happen! Input was empty.')
+                return (True, None)
+            try:
+                val = int(input_str)
+            except ValueError as err:
+                logger.warning('Integer not provided')
+                return (True, None)
+            if val not in choices.keys():
+                logger.warning('Valid integer not provided')
+                return (True, None)
+            return (False, val)
+
+        logger.debug('Requesting input...')
+        choice_str = '1 - rock, 2 - paper, 3 - scissors'
+        test_bool = True
+        while(test_bool):
+            in_put = input('Please provide your choice ({}):  '.format(choice_str))
+            logger.debug('Attempting to check input ...')
+            test_bool_tup = check_input(in_put)
+            test_bool = test_bool_tup[0]
+        logger.debug('Input received. Returning response:  {}'.format(test_bool_tup[1]))
+        return test_bool_tup[1]
 
 
 def get_user_input():
@@ -60,10 +148,11 @@ def get_user_input():
     """
 
     logger.debug('Starting get_user_input()...')
-    logger.debug('Ending get_user_input()...')
-    # pass
+    user_obj = Choice()
+    user_obj.choice = user_obj.input()
+    logger.debug('Ending get_user_input() & returning:  {}'.format(user_obj.choice))
 
-    return None
+    return user_obj.choice
 
 
 def get_comp_choice():
@@ -84,10 +173,11 @@ def get_comp_choice():
     # =====================================================================
 
     logger.debug('Starting get_comp_choice()...')
-    logger.debug('Ending get_comp_choice()...')
+    random_int = random.randint(1, len(choices.keys()))
+    logger.debug('Ending get_comp_choice() & returning:  {}'.format(random_int))
     # pass
 
-    return None
+    return random_int
 
 
 def calc_winner(user:int, comp:int):
@@ -108,9 +198,33 @@ def calc_winner(user:int, comp:int):
 
     """
 
+    def compare(user:int, comp:int):
+        """
+        Compares values and returns a string of who won.
+
+        From our STEP1-BU-Requirements.md file:
+
+                           1         2          3
+                       | ROCK  |   PAPER  | SCISSORS
+            1 ROCK     |  tie  |   paper  | rock
+            2 PAPER    | paper |    tie   | scissors
+            3 SCISSORS |  rock | scissors | tie
+
+        """
+
+        if user == comp:
+            return 'N/A - tie'
+        elif (user == 1 and comp == 2) or (user == 2 and comp == 3) or (user == 3 and comp == 1):
+            return 'Computer Wins!'
+        logger.debug('Ending calc_winner()...')
+
     logger.debug('Starting calc_winner()...')
+    dict2rtn = dict()
+    dict2rtn['user'] = user
+    dict2rtn['comp'] = comp
+    logger.debug('Attempting to call compare()...')
+    dict2rtn['winner'] = compare(user, comp)
     logger.debug('Ending calc_winner()...')
-    # pass
 
     return None
 
@@ -142,7 +256,7 @@ def print_winner(data_dict:dict):
 if __name__ == "__main__":
     """
     This function is only executed if run as a script.
-    This particular bare bones STEP4 integrates the outside functions.
+    This particular bare bones STEP3 will only utilize base requirements.
     """
 
     logger.debug('Starting {}()...'.format(__name__))

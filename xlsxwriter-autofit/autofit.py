@@ -5,12 +5,12 @@ def get_df(fn:str):
     df = pd.read_excel(fn)
     return df
 
-def make_xlsx(fn:str, df:pd.DataFrame):
+def make_xlsx(fn:str, df:pd.DataFrame, idx_bool:bool=True):
     # Create a Pandas Excel writer using XlsxWriter as the engine.
     writer = pd.ExcelWriter(fn, engine='xlsxwriter')
 
     # Convert the dataframe to an XlsxWriter Excel object.
-    df.to_excel(writer, sheet_name='Testing', index=False)
+    df.to_excel(writer, sheet_name='Testing', index=idx_bool)
 
     # Close the Pandas Excel writer and output the Excel file.
     writer.save()
@@ -20,4 +20,4 @@ if __name__ == "__main__":
     filename = 'TestBook.xlsx'
     df = get_df(filename)
     print(df.head())
-    make_xlsx('NewBook.xlsx', df)
+    make_xlsx('NewBook.xlsx', df, False)

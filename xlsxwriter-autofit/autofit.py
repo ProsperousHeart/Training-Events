@@ -6,11 +6,25 @@ def get_df(fn:str):
     return df
 
 def make_xlsx(fn:str, df:pd.DataFrame, idx_bool:bool=True):
+    def autofit(writer):
+        """
+        This is the function that will make all sheets be autofitted to data.
+
+        """
+
+        workbook = writer.book
+        worksheet_list = workbook.worksheets()
+        for ws in worksheet_list:
+            pass
+        
     # Create a Pandas Excel writer using XlsxWriter as the engine.
     writer = pd.ExcelWriter(fn, engine='xlsxwriter')
 
     # Convert the dataframe to an XlsxWriter Excel object.
-    df.to_excel(writer, sheet_name='Testing', index=idx_bool)
+    df.to_excel(writer, sheet_name='Testing1', index=idx_bool)
+    df.to_excel(writer, sheet_name='Testing2', index=idx_bool)
+
+    autofit(writer)
 
     # Close the Pandas Excel writer and output the Excel file.
     writer.save()

@@ -32,3 +32,7 @@ The following links to [my cheatsheets](https://github.com/ProsperousHeart/cheat
 
 - how to [setup your environment variables](https://github.com/ProsperousHeart/cheatsheets/blob/master/Processes/SetEnvVars.md)
 - how to [setup a virtual environment](https://github.com/ProsperousHeart/cheatsheets/blob/master/Tools/VirtualEnvironments.md) (process is [here](https://github.com/ProsperousHeart/cheatsheets/blob/master/Processes/virtualenvs.md))
+
+# Contact Info
+
+If you have any questions about this training, feel free to contact me [on my LinkedIn](https://linkedin.com/in/kkeeton/) profile.

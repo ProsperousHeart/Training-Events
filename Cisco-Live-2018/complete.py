@@ -109,7 +109,7 @@ class Choice(object):
         # pass
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     """
     This function is only executed if run as a script.
     This particular bare bones STEP3 will only utilize base requirements.

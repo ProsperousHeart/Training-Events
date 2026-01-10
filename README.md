@@ -1,2 +1,2 @@
 # Personal-Projects
-This repo is for personal projects I have done and have received confirmation that I can put source code here as my profilo.
+This repo is for personal projects or conference trainings I have done and have received confirmation that I can put source code here as my profilo.
